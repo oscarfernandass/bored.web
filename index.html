@@ -3,7 +3,7 @@
 <head>
     <title>bored</title>
 </head>
-<h1 style="text-align: center; font-family:Bradley Hand, cursive; font-size: 62px; margin-top: 2%; color:aquamarine">NEUTRAL AND BORED?</h1>
+<h1 style="text-align: center; font-family:Bradley Hand, cursive; font-size: 62px; margin-top: 2%; color:aquamarine">BORED?</h1>
 
 <body>
 
@@ -24,7 +24,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: -2%;
-height: 500px; 
+height: 525px; 
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -131,6 +131,22 @@ transform: scale(1.24); /* Zoom effect */
 animation: blink 1s linear infinite;
 font-size: 36px;
 }
+.back-button {
+  margin-top: 6px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #00db16; /* You can change this color to your preference */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #3949AB; /* Darker shade on hover */
+}
 
 </style>
 
@@ -204,6 +220,9 @@ font-size: 36px;
         </div>
       </div>
       </div>
+      <center>
+        <input class="back-button" id="backbutton" type="button" value="BACK">
+        </center>
       </div>
       </center>
 
@@ -276,6 +295,9 @@ font-size: 36px;
 
          </center>
      </div>
+     <center>
+      <input class="back-button" id="backbutton1" type="button" value="BACK">
+     </center>
      </div>
 
 
@@ -342,6 +364,9 @@ font-size: 36px;
 
          </center>
      </div>
+     <center>
+      <input class="back-button" id="backbutton2" type="button" value="BACK">
+     </center>
      </div>
 
 
@@ -416,6 +441,9 @@ font-size: 36px;
 
          </center>
      </div>
+     <center>
+      <input class="back-button" id="backbutton3" type="button" value="BACK">
+     </center>
      </div>
 
 
@@ -489,7 +517,11 @@ font-size: 36px;
 
          </center>
      </div>
+     <center>
+      <input class="back-button" id="backbutton4" type="button" value="BACK">
+     </center>
      </div>
+    
      </div>
     </div>
 
@@ -503,11 +535,12 @@ font-size: 36px;
 
 
     <script>
-
-        function runByDefault() {
+      
+      
+      function runByDefault() {
               const responseText = "We know that you're bored right now, Dont worry ,we'll entertain you with our content and make your day awesome.";
               const responseElement = document.getElementById("boredtext");
-        
+              
               function displayResponseText() {
                 for (let i = 0; i < responseText.length; i++) {
                   setTimeout(() => {
@@ -515,7 +548,7 @@ font-size: 36px;
                   }, i * 50);
                 }
               }
-        
+              
               responseElement.style.color = "red";
               responseElement.style.fontSize = "40px";
               responseElement.style.fontFamily = "Courier New, monospace, Courier, monospace";
@@ -523,14 +556,14 @@ font-size: 36px;
         
               document.getElementById("input-box").style.width = "1045px";
             }
-        
+            
             // Run the function when the page finishes loading.
             window.onload = runByDefault;
-
+            
             document.getElementById("boredmovies").addEventListener("click", function(event){
               document.getElementById("box5").style.display = "none";
               document.getElementById("moviebored").style.display = "inline";
-
+              
             });
             document.getElementById("boredsongs").addEventListener("click", function(event){
             
@@ -550,7 +583,28 @@ font-size: 36px;
               document.getElementById("websbored").style.display = "inline";
               
             });
+            document.getElementById("backbutton").addEventListener("click", function() {
+          window.history.back();
+          });
 
+            document.getElementById("backbutton1").addEventListener("click", function() {
+              document.getElementById("moviebored").style.display = "none";
+              document.getElementById("box5").style.display = "inline";
+          });
+            document.getElementById("backbutton2").addEventListener("click", function() {
+              document.getElementById("box5").style.display = "inline";
+              document.getElementById("moviebored").style.display = "none";
+              document.getElementById("songbored").style.display = "none";
+          });
+            document.getElementById("backbutton3").addEventListener("click", function() {
+              document.getElementById("box5").style.display = "inline";
+              document.getElementById("bookbored").style.display = "none";
+          });
+            document.getElementById("backbutton4").addEventListener("click", function() {
+              document.getElementById("box5").style.display = "inline";
+              document.getElementById("websbored").style.display = "none";
+          });
+            
 
             </script>
     
@@ -561,5 +615,5 @@ font-size: 36px;
     
     
     
-</body>
-</html>
+  </body>
+  </html>
